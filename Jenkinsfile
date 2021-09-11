@@ -39,10 +39,10 @@ pipeline {
       echo "Post stage running on Success!!!"
       echo env.BUILD_NUMBER
       echo env.JOB_NAME
-      jiraSendDeploymentInfo environmentId: 'us-prod1', environmentName: 'us-prod1', environmentType: 'production', issueKeys: [JiraID], serviceIds: [''], site: 'amar-lab.atlassian.net', state: 'successful'
+      jiraSendDeploymentInfo environmentId: 'us-prod1', environmentName: 'us-staging1', environmentType: 'testing', issueKeys: [JiraID], serviceIds: [''], site: 'amar-lab.atlassian.net', state: 'successful'
     }
     failure {
-      jiraSendDeploymentInfo environmentId: 'us-prod1', environmentName: 'us-prod1', environmentType: 'production', issueKeys: [JiraID], serviceIds: [''], site: 'amar-lab.atlassian.net', state: 'failed'
+      jiraSendDeploymentInfo environmentId: 'us-prod1', environmentName: 'us-staging1', environmentType: 'testing', issueKeys: [JiraID], serviceIds: [''], site: 'amar-lab.atlassian.net', state: 'failed'
 
     }
   }
