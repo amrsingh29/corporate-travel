@@ -56,5 +56,3 @@ A few accounts were set for testing, like ***admin*** (password: admin), ***test
 Image private.jpg: https://commons.wikimedia.org/wiki/File:(315-365)_Locked_(6149414678).jpg
 
 Image public.jpg: https://commons.wikimedia.org/wiki/File:Drown%3F!_(131380682).jpg
-
-Test 12...3
