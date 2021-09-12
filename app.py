@@ -177,7 +177,7 @@ def FUN_delete_user(id):
 @app.route("/add_user", methods = ["POST"])
 def FUN_add_user():
     if session.get("current_user", None) == "ADMIN": # only Admin should be able to add user.
-        # before we add the user, we need to ensure this is doesn't exsit in database. We also need to ensure the id is valid.
+        # before we add the user, we need to ensure this is doesn't exsit in database. We also need to ensure the id is valid.,,,
         if request.form.get('id').upper() in list_users():
             user_list = list_users()
             user_table = zip(range(1, len(user_list)+1),\
@@ -200,4 +200,4 @@ def FUN_add_user():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True, host="0.0.0.0", port=8181)
