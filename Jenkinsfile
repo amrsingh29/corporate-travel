@@ -13,14 +13,14 @@ pipeline {
         git branch: 'main', url: 'https://github.com/amrsingh29/corporate-travel.git'
         script {
 
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build registry + ":latest"
         }
         script {
           docker.withRegistry('', registryCredential) {
             dockerImage.push()
           }
         }
-        sh "docker rmi $registry:$BUILD_NUMBER"
+        sh "docker rmi $registry:latest"
 
       }
 
